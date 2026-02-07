@@ -53,38 +53,62 @@ img {
 }
 
 /* TODO Task 3: Navigation Styles */
-nav {
+.nav{
+  max-width: 900px;
+  margin: 0 auto 18px;
   background-color: #fbcfe8;
-  padding: 12px 0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 30px rgba(122, 40, 74, 0.08);
 }
 
-nav ul {
+.nav ul,
+.nav-list{
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  color: #7a284a;
+.nav a,
+.nav-link{
   text-decoration: none;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 8px;
+  color: #7a284a;
+  font-weight: 800;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color .2s ease, transform .2s ease;
 }
 
-nav a:hover {
-  background-color: #f9a8d4;
+.nav a:hover,
+.nav-link:hover{
+  background: rgba(255,255,255,0.55);
+  transform: translateY(-1px);
+}
+
+.nav a.is-active,
+.nav a.active,
+.nav-link.is-active{
+  background: rgba(255,255,255,0.65);
+}
+
+.page{
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.8);
+  border: 2px solid #f9a8d4;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(122, 40, 74, 0.08);
 }
 
 /* Main Content Styles */
 main {
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 section {
@@ -92,6 +116,44 @@ section {
   margin: 1.5rem 0;
 }
 
+/* About cards */
+.section {
+  background-color: #ffffff;
+  border: 2px solid #f9a8d4;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.section-subtitle {
+  text-align: left;
+  margin: 0.25rem 0 1rem;
+  max-width: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.about-card {
+  background-color: #fff7fa;
+  border: 2px solid #f9a8d4;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.about-card h3 {
+  color: #a85574;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.about-card p {
+  margin: 0;
+  max-width: none;
+}
 
 /* TODO Task 4: Form Styles */
 form {
@@ -138,14 +200,18 @@ input[type="submit"]:hover {
   background-color: #ec4899;
 }
 
-
 /* Footer Styles */
 footer {
   text-align: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
+  max-width: 900px;
+  margin: 18px auto 0;
+  padding: 18px 12px;
   color: #7a284a;
+  background-color: #fbcfe8;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(122, 40, 74, 0.08);
 }
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -170,7 +236,8 @@ footer {
   }
 
   /* Stack navigation vertically */
-  nav ul {
+  .nav ul,
+  .nav-list {
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -199,6 +266,18 @@ footer {
     margin: 1rem auto;
     padding: 0.5rem;
   }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .section-subtitle {
+    margin: 0.25rem 0 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -206,7 +285,8 @@ footer {
     padding: 10px;
   }
 
-  nav a {
+  .nav a,
+  .nav-link {
     padding: 8px 12px;
   }
 
@@ -233,4 +313,3 @@ footer {
     max-width: 320px;
   }
 }
-

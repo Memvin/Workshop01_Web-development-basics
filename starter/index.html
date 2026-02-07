@@ -15,13 +15,15 @@
 
 <body>
   <!-- Navigation menu -->
-  <nav aria-label="Primary navigation">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="nav" aria-label="Primary navigation">
+  <ul class="nav-list">
+    <li><a class="nav-link is-active" href="#home">Home</a></li>
+    <li><a class="nav-link" href="#about">About</a></li>
+    <li><a class="nav-link" href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="page">
+
 
 <main>
   <!-- Main content -->
@@ -40,13 +42,29 @@
     />
   </section>
 
-  <!-- About section -->
-  <section id="about">
-    <h2>About</h2>
-    <p>
-My Emmi, and I’m a second-year Business Information Technology student at Laurea University of Applied Sciences. I’m learning HTML and CSS and building small web projects to practice.
-    </p>
-  </section>
+<!-- ABOUT CARDS -->
+<section id="about" class="section">
+  <h2>About</h2>
+  <p class="section-subtitle">A quick overview of my studies, interests, and goals.</p>
+
+  <div class="about-grid">
+    <article class="about-card">
+      <h3>Studies</h3>
+      <p>Business Information Technology at Laurea University of Applied Sciences.</p>
+    </article>
+
+    <article class="about-card">
+      <h3>Interests</h3>
+      <p>Camping, snorkelling, knitting, and learning web development.</p>
+    </article>
+
+    <article class="about-card">
+      <h3>Goal</h3>
+      <p>Build confidence in HTML/CSS and create clean, responsive layouts.</p>
+    </article>
+  </div>
+</section>
+
 
 <!-- Contact section -->
 <section id="contact">
@@ -73,7 +91,7 @@ My Emmi, and I’m a second-year Business Information Technology student at Laur
 </section>
 
 </main>
-
+  </div>
 
 <footer>
   <p>© 2026 Emmi Vinberg</p>
