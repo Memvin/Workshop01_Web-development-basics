@@ -91,27 +91,49 @@ section {
 
 /* TODO Task 4: Form Styles */
 form {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
 
+form div {
+  margin-bottom: 1rem;
 }
 
 label {
-
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #7a284a;
 }
 
 input,
 textarea {
-  /* Style form inputs */
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #f9a8d4;
+  border-radius: 10px;
+  font-family: inherit;
 }
 
 button,
 input[type="submit"] {
-  /* Style the submit button */
+  display: block;
+  margin: 0.5rem auto 0;
+  padding: 0.7rem 1.4rem;
+  background-color: #f472b6;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 button:hover,
 input[type="submit"]:hover {
-  /* Add hover effect for button */
+  background-color: #ec4899;
 }
+
 
 /* Footer Styles */
 footer {
