@@ -53,23 +53,31 @@ img {
 
 /* TODO Task 3: Navigation Styles */
 nav {
-
+  background-color: #fbcfe8;
+  padding: 12px 0;
 }
 
 nav ul {
-  /* Remove bullets and style the list */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav li {
-  /* Display items horizontally */
+  display: inline-block;
 }
 
 nav a {
-  /* Style the links */
+  color: #7a284a;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
 nav a:hover {
-  /* Add hover effect */
+  background-color: #f9a8d4;
 }
 
 /* Main Content Styles */
