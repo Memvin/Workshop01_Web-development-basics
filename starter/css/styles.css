@@ -82,12 +82,15 @@ nav a:hover {
 
 /* Main Content Styles */
 main {
-
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 section {
   /* Add spacing between sections */
+  margin: 1.5rem 0;
 }
+
 
 /* TODO Task 4: Form Styles */
 form {
@@ -137,14 +140,80 @@ input[type="submit"]:hover {
 
 /* Footer Styles */
 footer {
-
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  color: #7a284a;
 }
 
 /* TODO Task 5: Media Queries for Responsive Design */
 @media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
 
+  /* Stack navigation vertically */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Reduce font sizes */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  /* Reduce spacing */
+  section {
+    margin: 1rem 0;
+  }
+
+  img {
+    margin: 0.75rem auto;
+    border-width: 2px;
+  }
+
+  form {
+    margin: 1rem auto;
+    padding: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
 
+  nav a {
+    padding: 8px 12px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin: 0.6rem auto;
+  }
+
+  input,
+  textarea {
+    padding: 0.55rem;
+  }
+
+  button,
+  input[type="submit"] {
+    width: 100%;
+    max-width: 320px;
+  }
 }
+
