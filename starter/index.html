@@ -4,110 +4,139 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Add a descriptive title -->
   <title>Emmi Vinberg | Workshop 01</title>
 
-  <!-- Link to CSS file -->
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
-  <!-- Navigation menu -->
-<nav class="nav" aria-label="Primary navigation">
-  <ul class="nav-list">
-    <li><a class="nav-link is-active" href="#home">Home</a></li>
-    <li><a class="nav-link" href="#about">About</a></li>
-    <li><a class="nav-link" href="#contact">Contact</a></li>
-  </ul>
-</nav>
-<div class="page">
+  <nav class="nav" aria-label="Primary navigation">
+    <ul class="nav-list">
+      <li><a class="nav-link is-active" href="#home">Home</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+      <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
 
+  <div class="page">
+    <main>
+      <section id="home">
+        <h1>Emmi Vinberg</h1>
+        <h2>Learning web development basics</h2>
 
-<main>
-  <!-- Main content -->
-  <section id="home">
-    <h1>Emmi Vinberg</h1>
-    <h2>Learning web development basics</h2>
+        <p>
+          Hi! I’m Emmi. This is my Workshop 01 page where I’m practising HTML structure,
+          styling with CSS, navigation links, and a simple contact form.
+        </p>
 
-    <p>
-      Hi! I’m Emmi. This is my Workshop 01 page where I’m practising HTML structure,
-      styling with CSS, navigation links, and a simple contact form.
-    </p>
+        <img src="1586838280011.jpeg" alt="Emmi Vinberg" />
+      </section>
 
-    <img
-      src="1586838280011.jpeg"
-      alt="Emmi Vinberg"
-    />
-  </section>
+      <section id="about" class="section">
+        <h2>About</h2>
+        <p class="section-subtitle">A quick overview of my studies, interests, and goals.</p>
 
-<!-- ABOUT CARDS -->
-<section id="about" class="section">
-  <h2>About</h2>
-  <p class="section-subtitle">A quick overview of my studies, interests, and goals.</p>
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>Studies</h3>
+            <p>Business Information Technology at Laurea University of Applied Sciences.</p>
+          </article>
 
-  <div class="about-grid">
-    <article class="about-card">
-      <h3>Studies</h3>
-      <p>Business Information Technology at Laurea University of Applied Sciences.</p>
-    </article>
+          <article class="about-card">
+            <h3>Interests</h3>
+            <p>Camping, snorkelling, knitting, and learning web development.</p>
+          </article>
 
-    <article class="about-card">
-      <h3>Interests</h3>
-      <p>Camping, snorkelling, knitting, and learning web development.</p>
-    </article>
+          <article class="about-card">
+            <h3>Goal</h3>
+            <p>Build confidence in HTML/CSS and create clean, responsive layouts.</p>
+          </article>
+        </div>
+      </section>
 
-    <article class="about-card">
-      <h3>Goal</h3>
-      <p>Build confidence in HTML/CSS and create clean, responsive layouts.</p>
-    </article>
+      <section id="contact" class="contact-card">
+        <div class="contact-header">
+          <h2>Contact Emmi</h2>
+          <p class="contact-subtitle">Send me a message. Fields marked * are required.</p>
+        </div>
+
+        <form class="contact-form">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required />
+          </div>
+
+          <div class="field">
+            <label for="topic">Topic <span class="req">*</span></label>
+            <select id="topic" name="topic" required>
+              <option value="" selected disabled>Choose a topic</option>
+              <option>Study / Laurea</option>
+              <option>Web development</option>
+              <option>Project / collaboration</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="8" maxlength="300" placeholder="Write your message..." required></textarea>
+            <div class="form-meta">
+              <span>Max 300 characters</span>
+              <span id="charCount">0/300</span>
+            </div>
+          </div>
+
+          <div class="field checkbox">
+            <input type="checkbox" id="demo" name="demo" required />
+            <label for="demo">I agree that this form is for demo purposes <span class="req">*</span></label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn-primary">Send</button>
+            <button type="reset" class="btn-secondary">Clear</button>
+          </div>
+        </form>
+      </section>
+    </main>
   </div>
-</section>
 
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-title">Connect with me</p>
 
-<!-- Contact section -->
-<section id="contact">
-  <h2>Contact</h2>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://www.linkedin.com/in/emmivinberg" target="_blank" aria-label="LinkedIn" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Memvin" target="_blank" aria-label="GitHub" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/memvin" target="_blank" aria-label="Instagram" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
 
-  <form>
-    <div>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
+      <p class="footer-copy">© 2026 Emmi Vinberg</p>
     </div>
+  </footer>
 
-    <div>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-    </div>
+  <script>
+    const msg = document.getElementById("message");
+    const out = document.getElementById("charCount");
 
-    <div>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
+    function updateCount() {
+      out.textContent = `${msg.value.length}/300`;
+    }
 
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-</main>
-  </div>
-
-<footer>
-  <p>© 2026 Emmi Vinberg</p>
-
-  <div class="social-links" aria-label="Social media links">
-    <a href="https://www.linkedin.com/in/emmivinberg" target="_blank" aria-label="LinkedIn" rel="noopener">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/Memvin" target="_blank" aria-label="GitHub" rel="noopener">
-      <i class="fa-brands fa-github"></i>
-    </a>
-    <a href="https://www.instagram.com/memvin" target="_blank" aria-label="Instagram" rel="noopener">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-  </div>
-</footer>
-
+    msg.addEventListener("input", updateCount);
+    updateCount();
+  </script>
 </body>
 </html>

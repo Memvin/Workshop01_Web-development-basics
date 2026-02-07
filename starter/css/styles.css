@@ -229,10 +229,124 @@ footer {
   color: #ec4899;
 }
 
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.footer-copy {
+  margin-top: 0.75rem;
+}
+
+/* Contact page layout */
+.contact-header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.contact-subtitle {
+  text-align: center;
+  max-width: none;
+  margin: 0.25rem auto 1.25rem;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border: 2px solid #f9a8d4;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.contact-form {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.contact-form form {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.req {
+  color: #a85574;
+  font-weight: 800;
+}
+
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #f9a8d4;
+  border-radius: 10px;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+.form-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  color: #7a284a;
+}
+
+.field.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.field.checkbox input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.field.checkbox label {
+  margin: 0;
+  font-weight: 600;
+  display: inline;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  margin: 0;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #7a284a;
+  border: 2px solid #f9a8d4;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
 /* TODO Task 5: Media Queries for Responsive Design */
 @media (max-width: 768px) {
   body {
     padding: 12px;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
   }
 
   /* Stack navigation vertically */
@@ -312,4 +426,87 @@ footer {
     width: 100%;
     max-width: 320px;
   }
+}
+.site-header h1 { margin-bottom: 0.25rem; }
+.site-header h2 { margin-bottom: 0.5rem; }
+.lead { text-align: center; max-width: none; margin: 0.5rem auto 0; }
+
+.wrap { margin-top: 1rem; }
+
+.controls {
+  background-color: #ffffff;
+  border: 2px solid #f9a8d4;
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.controls h3 {
+  color: #a85574;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  border: 2px solid #f9a8d4;
+  background-color: #ffffff;
+  color: #7a284a;
+  font-weight: 800;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip:hover { background-color: rgba(255,255,255,0.55); }
+
+.chip.is-active {
+  background-color: #fbcfe8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 2px solid #f9a8d4;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.card img {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card figcaption {
+  padding: 0.8rem;
+}
+
+.card h4 {
+  color: #a85574;
+  margin-bottom: 0.25rem;
+}
+
+.card figcaption p {
+  margin: 0;
+  max-width: none;
+}
+
+.is-hidden { display: none; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
 }

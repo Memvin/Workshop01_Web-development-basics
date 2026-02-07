@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Emmi Vinberg</title>
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><a class="nav-link" href="index.html#about">About</a></li>
+      <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+      <li><a class="nav-link is-active" href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+    <header class="site-header">
+      <h1>My Mini Gallery</h1>
+      <h2>A responsive gallery using HTML, CSS Grid and simple JavaScript</h2>
+      <p class="lead">
+        Use the filters to show only camping, snorkelling, knitting, or study images.
+      </p>
+    </header>
+
+    <main class="wrap">
+      <section class="controls" aria-label="Gallery filters">
+        <h3>Filter</h3>
+        <div class="buttons">
+          <button class="chip is-active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="camping" type="button">Camping</button>
+          <button class="chip" data-filter="snorkelling" type="button">Snorkelling</button>
+          <button class="chip" data-filter="knitting" type="button">Knitting</button>
+          <button class="chip" data-filter="study" type="button">Study</button>
+        </div>
+      </section>
+
+      <section id="gallery" class="grid" aria-label="Image gallery">
+
+        <figure class="card" data-category="camping">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&h=650&fit=crop" alt="Tent set up in nature">
+          <figcaption>
+            <h4>Weekend Camping</h4>
+            <p>camping</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="snorkelling">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900&h=650&fit=crop" alt="Ocean waves at a beach">
+          <figcaption>
+            <h4>Ocean Time</h4>
+            <p>snorkelling</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="knitting">
+          <img src="https://images.unsplash.com/photo-1669039168021-f3fe6dc3c020?w=900&h=650&fit=crop" alt="Knitted hat project">
+          <figcaption>
+            <h4>Knitting Project</h4>
+            <p>knitting</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="study">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&h=650&fit=crop" alt="Laptop with code on screen">
+          <figcaption>
+            <h4>Study Session</h4>
+            <p>study</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="camping">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900&h=650&fit=crop" alt="Mountains during sunset">
+          <figcaption>
+            <h4>Sunset View</h4>
+            <p>camping</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="snorkelling">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&h=650&fit=crop" alt="Clear turquoise sea water">
+          <figcaption>
+            <h4>Clear Water</h4>
+            <p>snorkelling</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="knitting">
+          <img src="https://images.unsplash.com/photo-1600369672890-ac00f1907858?w=900&h=650&fit=crop" alt="Knitted fabric texture">
+          <figcaption>
+            <h4>Textures</h4>
+            <p>knitting</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="study">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&h=650&fit=crop" alt="Team planning at a desk">
+          <figcaption>
+            <h4>Planning</h4>
+            <p>study</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card" data-category="camping">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&h=650&fit=crop" alt="Camping by a lake with mountains">
+          <figcaption>
+            <h4>Lakeside Camping</h4>
+            <p>camping</p>
+          </figcaption>
+        </figure>
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-title">Connect with me</p>
+
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://www.linkedin.com/in/emmivinberg" target="_blank" aria-label="LinkedIn" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Memvin" target="_blank" aria-label="GitHub" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/memvin" target="_blank" aria-label="Instagram" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy">© 2026 Emmi Vinberg</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      function init() {
+        const status = document.getElementById("js-status");
+        if (status) status.textContent = "JS: running ✅";
+
+        const filterBtns = document.querySelectorAll(".chip");
+        const galleryItems = document.querySelectorAll(".card");
+
+        if (!filterBtns.length || !galleryItems.length) return;
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const filterValue = btn.dataset.filter;
+
+            filterBtns.forEach((b) => b.classList.remove("is-active"));
+            btn.classList.add("is-active");
+
+            galleryItems.forEach((item) => {
+              const itemCategory = item.dataset.category;
+              const shouldShow = filterValue === "all" || itemCategory === filterValue;
+              item.classList.toggle("is-hidden", !shouldShow);
+            });
+          });
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+</html>
